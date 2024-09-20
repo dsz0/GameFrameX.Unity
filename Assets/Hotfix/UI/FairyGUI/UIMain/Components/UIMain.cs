@@ -25,6 +25,7 @@ namespace Hotfix.UI
 		public GLoader m_player_icon { get; private set; }
 		public GTextField m_player_name { get; private set; }
 		public GTextField m_player_level { get; private set; }
+		public GButton m_user_button { get; private set; }
 
         private static GObject CreateGObject()
         {
@@ -88,6 +89,7 @@ namespace Hotfix.UI
 				m_player_icon = (GLoader)com.GetChild("player_icon");
 				m_player_name = (GTextField)com.GetChild("player_name");
 				m_player_level = (GTextField)com.GetChild("player_level");
+				m_user_button = (GButton)com.GetChild("user_button");
             }
         }
 
@@ -105,6 +107,7 @@ namespace Hotfix.UI
 			m_player_icon = null;
 			m_player_name = null;
 			m_player_level = null;
+			m_user_button = null;
             self = null;            
         }
 

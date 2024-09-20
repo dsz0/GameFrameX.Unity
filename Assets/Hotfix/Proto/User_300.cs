@@ -319,4 +319,40 @@ namespace Hotfix.Proto
 
 	}
 
+	/// <summary>
+	/// 请求玩家信息
+	/// </summary>
+	[ProtoContract]
+	[MessageTypeHandler(19660820)]
+	public sealed class ReqPlayerInfo : MessageObject, IRequestMessage
+	{
+		/// <summary>
+		/// 角色ID
+		/// </summary>
+		[ProtoMember(1)]
+		public long PlayerId { get; set; }
+
+	}
+
+	/// <summary>
+	/// 请求玩家信息返回
+	/// </summary>
+	[ProtoContract]
+	[MessageTypeHandler(19660821)]
+	public sealed class RespPlayerInfo : MessageObject, IResponseMessage
+	{
+		/// <summary>
+		/// 角色信息
+		/// </summary>
+		[ProtoMember(1)]
+		public PlayerInfo PlayerInfo { get; set; }
+
+		/// <summary>
+		/// 返回的错误码
+		/// </summary>
+		[ProtoMember(888)]
+		public int ErrorCode { get; set; }
+
+	}
+
 }
