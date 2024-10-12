@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using FairyGUI;
-using GameFrameX;
+using GameFrameX.Runtime;
 using GameFrameX.UI.Runtime;
 using Hotfix.Manager;
 using Hotfix.Proto;
@@ -42,7 +42,7 @@ namespace Hotfix.UI
 
         PlayerInfo m_SelectedPlayerInfo;
 
-        private async void OnPlayerListItemClick(EventContext context)
+        private void OnPlayerListItemClick(EventContext context)
         {
             if ((context.data as GComponent).dataSource is PlayerInfo playerInfo)
             {
